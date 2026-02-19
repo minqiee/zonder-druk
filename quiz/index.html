@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Onderzoeksresultaten–quiz</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body class="quiz-pagina">
+
+<!-- Header + Navigatie -->
+<header>
+    <nav class="navbar">
+        <div class="dropdown">
+            <div class="dropbtn">Menu ☰</div>
+            <div class="dropdown-content">
+                <a href="../index.html">Home</a>
+                <a href="index.html">Quiz</a>
+                <a href="../conclusie.html">Conclusie</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<br>
+
+<!-- Quiz container -->
+<div class="quiz-container">
+
+    <h1>Onderzoeksresultaten–quiz</h1>
+
+    <!-- bron: https://simplestepscode.com/javascript-quiz-tutorial/ -->
+
+    <div id="question-box">
+        <h2 id="question-text">Vraag wordt geladen...</h2>
+
+        <div id="answers">
+            <button class="answer-btn" id="A" onclick="checkAnswer('A')">A</button>
+            <button class="answer-btn" id="B" onclick="checkAnswer('B')">B</button>
+            <button class="answer-btn" id="C" onclick="checkAnswer('C')">C</button>
+            <button class="answer-btn" id="D" onclick="checkAnswer('D')">D</button>
+        </div>
+
+        <p id="feedback"></p>
+
+        <button id="next-btn" onclick="nextQuestion()" style="display:none;">
+            Volgende vraag →
+        </button>
+    </div>
+
+</div>
+
+<br><br>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; Minq 2026 - Zonder druk</p>
+</footer>
+
+<!-- Script voor de javascript -->
+<script src="main.js"></script>
+
+</body>
+</html>
