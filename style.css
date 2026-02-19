@@ -1,0 +1,374 @@
+/* Kleuren definiëren als variabelen voor gemak */
+:root {
+    --blauwgrijs: rgb(66, 106, 140);     
+    --pastelblauw: rgb(134, 170, 191);        
+    --wit: rgb(242, 243, 244);   
+    --bruin:rgb(203, 180, 144); 
+    --roze: rgb(243, 177, 178);
+    --helderblauw:rgb(20, 130, 147);  
+    --rood: rgb(211, 69, 67); 
+    --geel: rgb(245, 209, 120); 
+
+    /* Accentkleuren per pagina voor fade */
+    --accent-z: rgb(218, 197, 166);       /* voor homepagina en de letter Z */
+    --accent-contact: rgb(31, 158, 177);  /* voor contactpagina */
+    --accent-conclusie: rgb(247, 193, 181); /* voor conclusiepagina */
+}
+
+
+/* Pagina opmaak */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    background-color: var(--wit);
+    color: rgb(34, 34, 34);
+}
+header {
+    margin: 0;
+    padding: 0;
+}
+section {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+/* Titels */
+h1 {
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Linkkleuren */
+a:link {
+    color: var(--blauwgrijs); /* normale link */
+}
+a:visited {
+    color: var(--bruin); /* bezochte link */
+}
+a:hover {
+    color: var(--pastelblauw); /* lichtere tint*/
+}
+a:active {
+    color: var(--pastelblauw); /* klik-kleur */
+}
+
+
+/* Afbeelding op homepagina */
+.page-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* Afbeelding op conclusiepagina */
+.conclusie-image .page-image {
+    max-width: 450px;
+    margin: 0px auto 20px auto; /* margespeling */
+}
+/* Afbeelding op contactpagina */
+.contact-image .page-image {
+    max-width: 400px;
+    margin: 0px auto 100px auto; /* margespeling */
+}
+
+
+/* Fade achter de afbeelding op conclusiepagina */
+.conclusie-bg {
+    height: 400px;
+    background: linear-gradient(var(--accent-conclusie), var(--wit));
+    margin-top: -370px; /* fade aansluiten op de afbeelding */
+}
+/* Fade achter de afbeelding op contactpagina */
+.contact-bg {
+    height: 500px;
+    background: linear-gradient(var(--accent-contact), var(--wit));
+    margin-top: -620px; /* fade aansluiten op de afbeelding */
+}
+/* Fade achter de afbeelding op de homepagina */
+.home-bg {
+    background: linear-gradient(var(--accent-z), var(--wit));
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* Navigatiebalk contactpagina */
+.contact-pagina .navbar {
+    background-color: var(--helderblauw);
+    padding: 20px 40px;
+}
+/* Navigatiebalk quizpagina */
+.quiz-pagina .navbar {
+    background-color: var(--blauwgrijs);
+    padding: 20px 40px;
+}
+/* Navigatiebalk homepagina */
+.home-pagina .navbar {
+    background-color: var(--bruin);
+    padding: 20px 40px;
+}
+/* Navigatiebalk conclusiepagina */
+.conclusie-pagina .navbar {
+    background-color: var(--roze);
+    padding: 20px 40px;
+}
+
+
+/* Footer contactpagina */
+.contact-pagina footer {
+    background-color: var(--helderblauw);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+}
+/* Footer quizpagina */
+.quiz-pagina footer {
+    background-color: var(--blauwgrijs);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+}
+/* Footer homepagina */
+.home-pagina footer {
+    background-color: var(--bruin);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+}
+/* Footer conclusiepagina */
+.conclusie-pagina footer {
+    background-color: var(--roze);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+}
+
+/* Dropdown menu (bron: https://www.w3schools.com/css/css_dropdowns.asp) */
+/* Knop en menu bij elkaar */
+.dropdown {
+    position: relative;
+    display: inline-block; /* Dropdown naast andere elementen */
+}
+
+
+/* Knop voor het uitklappen menu homepagina */ 
+.home-pagina .dropbtn {
+    background-color: var(--accent-z);
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    cursor: pointer; /* Muis wordt handje */
+}
+/* Knop voor het uitklappen menu quizpagina */ 
+.quiz-pagina .dropbtn {
+    background-color: var(--pastelblauw);
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    cursor: pointer; /* Muis wordt handje */
+}
+/* Knop voor het uitklappen menu conclusiepagina */ 
+.conclusie-pagina .dropbtn {
+    background-color: var(--accent-conclusie);
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    cursor: pointer; /* Muis wordt handje */
+}
+/* Knop voor het uitklappen menu contactpagina */ 
+.contact-pagina .dropbtn {
+    background-color: var(--accent-contact);
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    cursor: pointer; /* Muis wordt handje */
+}
+
+
+/* Dropdownmenu homepagina */ 
+.home-pagina .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bruin);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+/* Dropdownmenu quizpagina */ 
+.quiz-pagina .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--pastelblauw);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+/* Dropdownmenu conclusiepagina */ 
+.conclusie-pagina .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--roze);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+/* Dropdownmenu contactpagina */ 
+.contact-pagina .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--helderblauw);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+
+/* Stijl linkjes in het menu */
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Kleurverandering homepagina*/ 
+.home-pagina .dropdown-content a:hover {
+    background-color: var(--blauwgrijs);
+}
+/* Kleurverandering quizpagina */ 
+.quiz-pagina .dropdown-content a:hover {
+    background-color: var(--bruin);
+}
+/* Kleurverandering conclusiepagina */ 
+.conclusie-pagina .dropdown-content a:hover {
+    background-color: var(--geel);
+}
+/* Kleurverandering contactpagina */ 
+.contact-pagina .dropdown-content a:hover {
+    background-color: var(--rood);
+}
+
+
+/* Zichtbaar worden menu */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Leuke kleur menu */
+.dropdown:hover .dropbtn {
+    background-color: var(--wit);
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+}
+
+table td {
+    padding: 12px 10px;
+    background-color: white;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Tabel margin */
+section p:nth-of-type(3) {
+    margin-bottom: 5px;
+}
+
+
+
+
+/* QUIZ STYLING */
+/* bron: https://simplestepscode.com/javascript-quiz-tutorial/ */ 
+/* bron: https://chatgpt.com prompt: hoe kun je een quiz van javascript en html stylen met css? */
+.quiz-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* bron: https://chatgpt.com prompt: hoe kun je in css voor een quiz uit javascript een animatie maken voor de elementen? */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-container h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+#question-text {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.answer-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background: #f7f7f7;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.answer-btn:hover {
+    background: #eaeaea;
+    border-color: #bbb;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#next-btn {
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 12px 25px;
+    font-size: 18px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#next-btn:hover {
+    background: #555;
+}
+
+.dropdown-content {
+    z-index: 9999;
+}
+
+
+/* Footer bij quiz onderaan */
+.quiz-pagina footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
